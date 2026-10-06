@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sriram M | Software Development Engineer & Backend Java Specialist</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Portfolio of Sriram M - Electrical and Electronics Engineering undergraduate (2026) & Software Development Engineer specializing in Java, Spring Boot, REST APIs, and database performance optimization.">
+  <meta name="keywords"
+    content="Sriram M, Software Engineer, Java Developer, Spring Boot, REST API, Hibernate, MySQL, Full Stack, Portfolio, Chennai">
+  <meta name="author" content="Sriram M">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:title" content="Sriram M | Software Development Engineer">
+  <meta property="og:description"
+    content="Specializing in Java, Spring Boot microservices, high-throughput batch processing, and database optimization.">
+  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2338bdf8'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='50' fill='%23070b14'>SM</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Ambient Interactive Canvas & Glow Orbs -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- ==========================================================================
+       Navigation Header
+       ========================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Sriram M Home">
+        <div class="brand-logo-badge">SM</div>
+        <span class="brand-name">Sriram M</span>
+        <span class="brand-role-tag">SDE '26</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#simulator" class="nav-link">Architecture Lab</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button class="btn btn-secondary btn-sm" id="btn-view-resume-nav">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-indicator-dot"></span>
+            <span>Open to SDE & Backend Opportunities (Graduating 2026)</span>
+          </div>
+
+          <div class="hero-greeting">
+            <span>&lt;developer&gt;</span>
+            <span>Hello, I'm</span>
+          </div>
+
+          <h1 class="hero-name">
+            SRIRAM <span class="text-gradient">M</span>
+          </h1>
+
+          <div class="hero-dynamic-role">
+            <span>I build</span>
+            <span class="typing-text" id="typewriter-target">Robust Backend Systems</span>
+          </div>
+
+          <p class="hero-bio">
+            Electrical and Electronics Engineering undergraduate (2026) specializing in high-throughput backend
+            services, resilient REST APIs, and database performance optimization using <strong>Java, Spring Boot,
+              Hibernate, and MySQL</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <span>Explore Projects</span>
+            </a>
+
+            <a href="assets/resume.pdf" download="Sriram_M_Resume.pdf" class="btn btn-secondary btn-lg"
+              id="btn-download-resume">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV</span>
+            </a>
+
+            <button class="btn btn-outline btn-lg" id="btn-quick-email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              title="LinkedIn Profile" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              title="GitHub Profile" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </a>
+
+            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              title="LeetCode Practice" aria-label="LeetCode">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 18l6-6-6-6"></path>
+                <path d="M8 6l-6 6 6 6"></path>
+                <line x1="12" y1="2" x2="12" y2="22"></line>
+              </svg>
+            </a>
+
+            <a href="mailto:msriram292004@gmail.com" class="social-icon-btn" title="Direct Email" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+
+            <a href="tel:+917418400209" class="social-icon-btn" title="Direct Phone Call" aria-label="Phone">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">8.51</span>
+              <span class="stat-label">B.E. CGPA (NIET)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Batch Ingestion Recs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Composite Indexes</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2026</span>
+              <span class="stat-label">Graduating Batch</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Avatar Card -->
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow-ring"></div>
+
+            <div class="avatar-card">
+              <img src="assets/profile.jpg" alt="Sriram M Portrait" class="avatar-img" id="hero-avatar">
+              <div class="avatar-overlay-badge">
+                <div class="avatar-overlay-info">
+                  <h4>Sriram M</h4>
+                  <p>Chennai, Tamil Nadu, India</p>
+                </div>
+                <div class="status-indicator-dot"></div>
+              </div>
+            </div>
+
+            <!-- Floating Tech Chips -->
+            <div class="floating-tag tag-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+              <span>Spring Boot</span>
+            </div>
+
+            <div class="floating-tag tag-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+              <span>MySQL & JPA</span>
+            </div>
+
+            <div class="floating-tag tag-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              <span>Java 17/21</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About Me Section
+         ========================================================================== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Background & Perspective</span>
+          </div>
+          <h2 class="section-title">Engineering Discipline meets Software Scalability</h2>
+          <p class="section-subtitle">A synthesis of hardware analytical rigor, clean backend architecture, and
+            high-performance system design.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-content">
+            <p class="about-lead">
+              I am an Electrical and Electronics Engineering undergraduate at Nehru Institute of Engineering and
+              Technology (graduating 2026), driven by a deep passion for scalable software engineering.
+            </p>
+            <p class="about-paragraph">
+              Having trained across both low-level embedded systems (EduSkills Certified) and enterprise application
+              engineering, I possess a unique hardware-aware perspective on computational efficiency, memory
+              consumption, and data throughput.
+            </p>
+            <p class="about-paragraph">
+              My hands-on experience centers on designing resilient REST APIs with Java and Spring Boot, isolating
+              asynchronous job transactions, and tuning relational databases with batched JDBC inserts and composite
+              indexing.
+            </p>
+
+            <div class="languages-spoken-card">
+              <span class="lang-title">Spoken Languages & Proficiency</span>
+              <div class="lang-chips">
+                <div class="lang-chip">
+                  <span>English</span>
+                  <span class="lang-badge">Fluent / Professional</span>
+                </div>
+                <div class="lang-chip">
+                  <span>Tamil</span>
+                  <span class="lang-badge">Native / Fluent</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="strengths-grid">
+            <div class="strength-card">
+              <div class="strength-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="strength-title">High-Throughput APIs</h3>
+              <p class="strength-desc">Designing robust RESTful endpoints with Spring Boot, DTO validation, and clean
+                controller-service-repo separation.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3 class="strength-title">Database Performance</h3>
+              <p class="strength-desc">Optimizing MySQL query paths with composite indexes, batched JDBC writes, and
+                Hibernate/JPA transaction boundaries.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="strength-title">Full-Stack Capability</h3>
+              <p class="strength-desc">Bridging dynamic React frontends with Spring Boot backends for seamless,
+                responsive user experiences.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3 class="strength-title">Analytical Problem Solving</h3>
+              <p class="strength-desc">Continuous algorithmic practice on LeetCode & HackerRank, applying algorithmic
+                rigor to real-world edge cases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Skills Matrix Section
+         ========================================================================== */
+    -->
+    <section id="skills" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Technical Repertoire</span>
+          </div>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Core competencies cultivated through hands-on full-stack development, academic
+            coursework, and industry certifications.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-tabs">
+          <button class="tab-btn active" data-category="all">All Disciplines</button>
+          <button class="tab-btn" data-category="languages">Languages</button>
+          <button class="tab-btn" data-category="backend">Backend & Frameworks</button>
+          <button class="tab-btn" data-category="database">Databases & Optimization</button>
+          <button class="tab-btn" data-category="tools">Tools & Platforms</button>
+          <button class="tab-btn" data-category="soft">Professional Skills</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid-container">
+          <!-- Programming Languages -->
+          <div class="skill-category-card" data-category="languages">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Java (Core, OOP, Collections, Concurrency)</span>
+                  <span class="skill-level-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python (Scripting & Automation)</span>
+                  <span class="skill-level-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">C (Embedded Systems & Memory)</span>
+                  <span class="skill-level-badge">Strong</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript / ES6+</span>
+                  <span class="skill-level-badge">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 78%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks & Backend -->
+          <div class="skill-category-card" data-category="backend">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="category-title">Backend & Frameworks</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Spring Boot (REST APIs, Microservices)</span>
+                  <span class="skill-level-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Hibernate / Spring Data JPA</span>
+                  <span class="skill-level-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JDBC & Batched Inserts</span>
+                  <span class="skill-level-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 86%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">React (Frontend Integration)</span>
+                  <span class="skill-level-badge">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases & Optimization -->
+          <div class="skill-category-card" data-category="database">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Databases & Architecture</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">MySQL (Schema Design, Normalization)</span>
+                  <span class="skill-level-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Composite Indexing & Query Tuning</span>
+                  <span class="skill-level-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 84%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Async Batching & Transaction Boundaries</span>
+                  <span class="skill-level-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 82%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Data Visualization (Matplotlib)</span>
+                  <span class="skill-level-badge">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 76%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="skill-category-card" data-category="tools">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="category-title">Platforms & Practice</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Git & GitHub (Version Control, Branching)</span>
+                  <span class="skill-level-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Postman (API Testing & Mocking)</span>
+                  <span class="skill-level-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">LeetCode & HackerRank Problem Solving</span>
+                  <span class="skill-level-badge">Active</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Microsoft Tools & Dev Ecosystem</span>
+                  <span class="skill-level-badge">Proficient</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 82%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional & Soft Skills -->
+          <div class="skill-category-card" data-category="soft">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Professional & Soft Skills</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Analytical Thinking & System Decomposition</span>
+                  <span class="skill-level-badge">Expert</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Cross-Functional Teamwork & Collaboration</span>
+                  <span class="skill-level-badge">Strong</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Adaptability & Rapid Technical Onboarding</span>
+                  <span class="skill-level-badge">Strong</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Technical Communication & Time Management</span>
+                  <span class="skill-level-badge">Strong</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Featured Projects Section
+         ========================================================================== -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span>Engineered Systems</span>
+          </div>
+          <h2 class="section-title">Featured Software Projects</h2>
+          <p class="section-subtitle">Real-world applications showcasing scalable backend microservices, batched
+            ingestion pipelines, and interactive full-stack integrations.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Distributed Log Viewer & Aggregator -->
+          <article class="project-card">
+            <div class="project-media-wrapper">
+              <img src="assets/project-log-aggregator.jpg" alt="Distributed Log Aggregator Dashboard"
+                class="project-img">
+              <div class="project-media-overlay">
+                <div class="project-metric-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>500 Records / Batch Ingestion</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info-wrapper">
+              <div>
+                <div class="project-top-meta">
+                  <span class="project-type-badge">High-Throughput Distributed System</span>
+                </div>
+                <h3 class="project-title">Distributed Log Viewer & Aggregator</h3>
+                <p class="project-description">
+                  A full-stack enterprise log ingestion, indexing, and search engine capable of processing high-volume
+                  structured payloads with zero application thread stalls.
+                </p>
+              </div>
+
+              <ul class="project-features-list">
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>High-Throughput Ingestion:</strong> Built REST APIs for single & batch ingestion of up
+                    to 500 records per request with async job tracking and filtered, paginated search.</span>
+                </li>
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>Asynchronous Transaction Control:</strong> Implemented async batch workers with isolated
+                    transaction boundaries preventing cascade rollbacks.</span>
+                </li>
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>MySQL Database Optimization:</strong> Optimized query performance via 4 composite
+                    indexes and batched JDBC inserts, drastically reducing query latency.</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Java 17</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Hibernate / JPA</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Batched JDBC</span>
+                <span class="tech-tag">REST APIs</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('log-aggregator')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                  </svg>
+                  <span>Architecture Deep Dive</span>
+                </button>
+                <a href="#simulator" class="btn btn-secondary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Test in Live Simulator</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: E-Commerce Car Showroom Website -->
+          <article class="project-card reverse">
+            <div class="project-media-wrapper">
+              <img src="assets/project-car-showroom.jpg" alt="E-Commerce Car Showroom Website" class="project-img">
+              <div class="project-media-overlay">
+                <div class="project-metric-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <span>Full-Stack Dealership Platform</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info-wrapper">
+              <div>
+                <div class="project-top-meta">
+                  <span class="project-type-badge">Full-Stack Web Application</span>
+                </div>
+                <h3 class="project-title">E-Commerce Car Showroom Website</h3>
+                <p class="project-description">
+                  An end-to-end automotive e-commerce and dealership showroom platform designed with React frontend and
+                  Spring Boot REST backend services.
+                </p>
+              </div>
+
+              <ul class="project-features-list">
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>Full-Stack Architecture:</strong> Engineered responsive client using React,
+                    communicating with a decoupled Java Spring Boot microservice layer.</span>
+                </li>
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>Vehicle Catalog & Filtering:</strong> Implemented dynamic filtering across price
+                    categories, performance metrics, and vehicle types with MySQL persistence.</span>
+                </li>
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>RESTful Contract Integration:</strong> Designed structured endpoints for inventory
+                    management, customer inquiries, and test drive appointment bookings.</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JSON / Axios</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('car-showroom')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <span>Feature Breakdown</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Spring Boot To-Do REST API -->
+          <article class="project-card">
+            <div class="project-media-wrapper">
+              <img src="assets/project-todo-api.jpg" alt="Spring Boot To-Do REST API Architecture" class="project-img">
+              <div class="project-media-overlay">
+                <div class="project-metric-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Clean Layered CRUD Architecture</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info-wrapper">
+              <div>
+                <div class="project-top-meta">
+                  <span class="project-type-badge">Backend REST Service</span>
+                </div>
+                <h3 class="project-title">Spring Boot To-Do REST API</h3>
+                <p class="project-description">
+                  A production-grade RESTful API service engineered with strict adherence to MVC layered architecture,
+                  error handling standards, and input validation schemas.
+                </p>
+              </div>
+
+              <ul class="project-features-list">
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>Comprehensive CRUD Engine:</strong> Complete Create, Read, Update, Delete lifecycle for
+                    task management with HTTP status semantics.</span>
+                </li>
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>Layered Domain Architecture:</strong> Decoupled Controller, Service, and Repository
+                    patterns ensuring high unit testability and maintainability.</span>
+                </li>
+                <li class="project-feature-item">
+                  <span class="project-feature-bullet">▹</span>
+                  <span><strong>Standardized API Contracts:</strong> Utilized structured DTO models, custom exception
+                    payloads, and validation constraints.</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">Clean Architecture</span>
+                <span class="tech-tag">Postman</span>
+                <span class="tech-tag">DTO Validation</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('todo-api')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg>
+                  <span>API Spec & Schema</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive Architecture & Ingestion Simulator (Exclusive Feature)
+         ========================================================================== -->
+    <section id="simulator" class="simulator-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+              </path>
+            </svg>
+            <span>Live Interactive Lab</span>
+          </div>
+          <h2 class="section-title">Batch Ingestion & Indexing Benchmark Simulator</h2>
+          <p class="section-subtitle">Experience the performance delta between unindexed sequential writes and Sriram's
+            4-composite-index batched JDBC architecture.</p>
+        </div>
+
+        <div class="simulator-box">
+          <div class="simulator-header">
+            <div class="window-dots">
+              <div class="window-dot dot-red"></div>
+              <div class="window-dot dot-yellow"></div>
+              <div class="window-dot dot-green"></div>
+            </div>
+            <div class="sim-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+              <span>sriram-spring-boot-log-service :: v2.4-benchmark</span>
+            </div>
+            <div>
+              <span class="status-badge" style="font-size: 0.75rem; padding: 3px 10px;">JDBC Pool Ready</span>
+            </div>
+          </div>
+
+          <div class="simulator-body">
+            <!-- Controls -->
+            <div class="sim-controls">
+              <div class="sim-control-group">
+                <label class="sim-label" for="batch-size-select">Ingestion Batch Size</label>
+                <select id="batch-size-select" class="sim-select">
+                  <option value="100">100 Records / Batch</option>
+                  <option value="250">250 Records / Batch</option>
+                  <option value="500" selected>500 Records / Batch (Resume Milestone)</option>
+                </select>
+              </div>
+
+              <div class="sim-control-group">
+                <label class="sim-label" for="indexing-mode-select">Database Optimization Strategy</label>
+                <select id="indexing-mode-select" class="sim-select">
+                  <option value="optimized" selected>4 Composite Indexes + JDBC Batching (Optimized)</option>
+                  <option value="unoptimized">Single Table / No Indexes / Individual Writes (Standard)</option>
+                </select>
+              </div>
+
+              <button class="btn btn-primary" id="btn-run-simulation" style="width: 100%; margin-top: 8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Trigger Ingestion Benchmark</span>
+              </button>
+
+              <div class="sim-metrics-grid">
+                <div class="sim-metric-card">
+                  <span class="sim-metric-num" id="sim-latency-val">18 ms</span>
+                  <span class="sim-metric-title">P99 Query Latency</span>
+                </div>
+                <div class="sim-metric-card">
+                  <span class="sim-metric-num" id="sim-throughput-val">27,700 rec/s</span>
+                  <span class="sim-metric-title">Effective Throughput</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Output -->
+            <div class="sim-terminal-wrapper">
+              <div class="sim-terminal-output" id="terminal-screen">
+                <div class="terminal-line">
+                  <span class="terminal-timestamp">[SYSTEM INITIALIZATION]</span>
+                  <span>Hibernate Dialect: MySQL8Dialect. Composite indexes loaded.</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="terminal-timestamp">[READY]</span>
+                  <span class="terminal-ok">Asynchronous batch queue worker listening on port :8080</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="terminal-timestamp">[STATUS]</span>
+                  <span>Click "Trigger Ingestion Benchmark" above to test throughput.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Education & Certifications Section
+         ========================================================================== -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>Academic & Verified Honors</span>
+          </div>
+          <h2 class="section-title">Education & Credentials</h2>
+          <p class="section-subtitle">Consistent academic excellence coupled with verified industry certifications and
+            national conference presentation.</p>
+        </div>
+
+        <div class="edu-cert-grid">
+          <!-- Education Timeline -->
+          <div>
+            <h3
+              style="font-size: 1.35rem; margin-bottom: 24px; font-weight: 800; display: flex; align-items: center; gap: 10px;">
+              <span class="text-gradient">Academic Journey</span>
+            </h3>
+
+            <div class="timeline">
+              <!-- NIET -->
+              <div class="timeline-item">
+                <div class="timeline-dot">
+                  <div class="timeline-dot-inner"></div>
+                </div>
+                <div class="timeline-content">
+                  <div class="timeline-date">2022 – 2026 (Graduating)</div>
+                  <h4 class="timeline-title">Nehru Institute of Engineering and Technology</h4>
+                  <p class="timeline-subtitle">Bachelor of Engineering (B.E.) — Electrical and Electronics Engineering
+                    (EEE)</p>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Coimbatore, Tamil Nadu,
+                    India</p>
+                  <div class="timeline-score">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg>
+                    <span>CGPA: 8.51 / 10.0</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- HSC -->
+              <div class="timeline-item">
+                <div class="timeline-dot">
+                  <div class="timeline-dot-inner"></div>
+                </div>
+                <div class="timeline-content">
+                  <div class="timeline-date">Completed 2022</div>
+                  <h4 class="timeline-title">AVRMV Matric Hr. Sec. School</h4>
+                  <p class="timeline-subtitle">Higher Secondary Certificate (HSC)</p>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Ambasamudram, Tamil
+                    Nadu, India</p>
+                  <div class="timeline-score">
+                    <span>Percentage: 76%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SSLC -->
+              <div class="timeline-item">
+                <div class="timeline-dot">
+                  <div class="timeline-dot-inner"></div>
+                </div>
+                <div class="timeline-content">
+                  <div class="timeline-date">Completed 2020</div>
+                  <h4 class="timeline-title">AVRMV Matric Hr. Sec. School</h4>
+                  <p class="timeline-subtitle">Secondary School Leaving Certificate (SSLC)</p>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Ambasamudram, Tamil
+                    Nadu, India</p>
+                  <div class="timeline-score">
+                    <span>Percentage: 84%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications & Conference -->
+          <div>
+            <h3
+              style="font-size: 1.35rem; margin-bottom: 24px; font-weight: 800; display: flex; align-items: center; gap: 10px;">
+              <span class="text-gradient">Certifications & Honors</span>
+            </h3>
+
+            <div class="cert-cards-list">
+              <!-- NC-ISTAH 2024 -->
+              <div class="cert-card">
+                <div class="cert-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                </div>
+                <div class="cert-details">
+                  <h4>NC-ISTAH 2024</h4>
+                  <p>National Conference Presentation</p>
+                </div>
+                <span class="cert-badge-tag">Conference Honor</span>
+              </div>
+
+              <!-- EduSkills Embedded Developer -->
+              <div class="cert-card">
+                <div class="cert-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                    <line x1="20" y1="14" x2="23" y2="14"></line>
+                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                    <line x1="1" y1="14" x2="4" y2="14"></line>
+                  </svg>
+                </div>
+                <div class="cert-details">
+                  <h4>Embedded Developer</h4>
+                  <p>EduSkills Academy</p>
+                </div>
+                <span class="cert-badge-tag">Certified</span>
+              </div>
+
+              <!-- Programming in Java - Coursera -->
+              <div class="cert-card">
+                <div class="cert-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="cert-details">
+                  <h4>Programming in Java</h4>
+                  <p>Coursera Verified</p>
+                </div>
+                <span class="cert-badge-tag">Coursera</span>
+              </div>
+
+              <!-- Advanced Java - Coursera -->
+              <div class="cert-card">
+                <div class="cert-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                  </svg>
+                </div>
+                <div class="cert-details">
+                  <h4>Advanced Java</h4>
+                  <p>Coursera Verified</p>
+                </div>
+                <span class="cert-badge-tag">Coursera</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact & Get In Touch Section
+         ========================================================================== -->
+    <section id="contact" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Let's Connect</span>
+          </div>
+          <h2 class="section-title">Get In Touch With Sriram</h2>
+          <p class="section-subtitle">Interested in discussing software engineering opportunities, internships, or
+            backend architecture? Reach out anytime!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-panel">
+            <!-- Email -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <h4>Email Address</h4>
+                <a href="mailto:msriram292004@gmail.com">msriram292004@gmail.com</a>
+              </div>
+              <button class="copy-btn"
+                onclick="copyToClipboard('msriram292004@gmail.com', 'Email copied!')">Copy</button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <h4>Phone / WhatsApp</h4>
+                <a href="tel:+917418400209">+91 7418400209</a>
+              </div>
+              <button class="copy-btn" onclick="copyToClipboard('+917418400209', 'Phone number copied!')">Copy</button>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <h4>Primary Location</h4>
+                <p>Chennai, Tamil Nadu, India</p>
+              </div>
+            </div>
+
+            <!-- Social Links Panel -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <h4>Professional Networks</h4>
+                <div style="display: flex; gap: 12px; margin-top: 6px;">
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    style="color: var(--accent-cyan); font-size: 0.92rem;">LinkedIn ↗</a>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                    style="color: var(--accent-cyan); font-size: 0.92rem;">GitHub ↗</a>
+                  <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer"
+                    style="color: var(--accent-cyan); font-size: 0.92rem;">LeetCode ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Full Name</label>
+                <input type="text" id="contact-name" class="form-input"
+                  placeholder="e.g. Alex Morgan (Technical Recruiter)" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Your Work Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Opportunity / Subject</label>
+                <input type="text" id="contact-subject" class="form-input"
+                  placeholder="e.g. Backend Software Engineer Opportunity" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message Details</label>
+                <textarea id="contact-message" class="form-textarea"
+                  placeholder="Hi Sriram, I saw your portfolio and work with Java/Spring Boot..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message Directly</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-logo-badge">SM</div>
+          <span class="brand-name">SRIRAM M</span>
+        </a>
+
+        <div style="display: flex; gap: 20px; align-items: center;">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="assets/resume.pdf" download="Sriram_M_Resume.pdf" class="nav-link"
+            style="color: var(--accent-cyan);">CV Download ↗</a>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+        <p class="footer-copyright">
+          © <span id="current-year">2026</span> Sriram M. Built with precision for software engineering excellence.
+        </p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
+          Java • Spring Boot • Hibernate • MySQL
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Project Deep Dive Modals
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-project-title">Project Architecture Deep Dive</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-project-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Viewer Modal -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container" style="max-width: 900px; height: 85vh;">
+      <div class="modal-header">
+        <h3 class="modal-title">Sriram M — Official Resume</h3>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="assets/resume.pdf" download="Sriram_M_Resume.pdf" class="btn btn-primary btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download PDF</span>
+          </a>
+          <button class="modal-close-btn" id="resume-modal-close-btn">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body" style="height: calc(100% - 75px); padding: 0;">
+        <iframe src="assets/resume.pdf#toolbar=1" style="width: 100%; height: 100%; border: none;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
